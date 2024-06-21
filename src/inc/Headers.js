@@ -2,19 +2,20 @@ import React from "react";
 import foto from "../assets/img/testefoto.jpg";
 import logo from "../assets/img/Nike-Logo.png";
 import menu from "../assets/img/menu.png";
-import Stories from "../components/Stories";
+import Busca from "../Components/Busca";
 
 
 class Headers extends React.Component {
     render() {
         return (
             <header>
-                <img className="logo" src={logo} alt="logo"/>
-                <img className="foto-perfil" src={foto} alt="foto-perfil"/>
+                <div className="Box-Perfil">
+                    <img className="Foto-Perfil" src={foto} alt="foto-perfil" />
+                    <img className="Logo" src={logo} alt="logo" />
 
-                <input id="busca" type="search" />
-                <img className="menu" src={menu} alt="menu"/>
-
+                </div>
+                <Busca />
+                <img className="Menu" src={menu} alt="menu" />
             </header>
         )
     }

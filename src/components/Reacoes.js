@@ -6,10 +6,10 @@ import compartilhar from "../assets/img/compartilhar.png";
 class Reacoes extends React.Component {
     render(){
         return(
-            <div className="reacao">
-                <img className="icone-reacao" src={amei} alt="amei"></img>
-                <img className="icone-reacao" src={comentario} alt="comentario"></img>
-                <img className="icone-reacao" src={compartilhar} alt="compartilhar"></img>
+            <div className="Reacao">
+                <img className="Icone-Reacao" src={amei} alt="amei" />
+                <img className="Icone-Reacao" src={comentario} alt="comentario" />
+                <img className="Icone-Reacao" src={compartilhar} alt="compartilhar" />
             </div>
         )
     }

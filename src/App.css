@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,61 +40,112 @@
 
 
 /***************HEADER*****************/
-.foto-perfil{
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#Topo {
+  margin-top: 0px;
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(to right, #43FA8C, #52C0D8);
+}
+
+header .Box-Perfil {
+  margin-left: 5.5%;
+}
+
+header .Foto-Perfil {
   padding: 10px;
   max-width: 150px;
   max-height: 150px;
   margin-left: 8%;
-  margin-top: 1.5%;
-  position: fixed;
+  margin-top: 30px;
+  z-index: 2;
 }
 
-.logo{
+header .Logo {
   max-width: 100px;
-  position: fixed;
   z-index: 10;
-  margin-left: 10%;
-  margin-top: 1%;
+  margin-left: 30%;
+  margin-top: -200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.menu{
+header .Menu {
   padding: 10px;
   max-width: 60px;
   max-height: 60px;
-  right: 8%;
+  margin-right: 100px;
   margin-top: 2.5%;
-  position: fixed;
+  float: right;
+  /* position: fixed; */
 }
-
-#busca{
-  margin-left: 28%;
+/***************BUSCA******************/
+ .Busca {
+  display: flex;
+  /* margin-left: -200px;*/
   margin-top: 100px;
-  width: 300px;
+  align-items: center;
+  justify-content: center;
+  width: 750px;
+  height: 40px;
+}
+.Busca form input{
+  width: 600px;
+  outline: none;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border: 3px solid #191970;
+  border-radius: 5px 0 0 5px;
+  margin-top: -100px !important;
+
+}
+.Busca form input:focus{
+  color: #191970;
+}
+.Busca #Btn-Busca{
+  width: 40px;
+  height: 36px;
+  border: 1px solid #191970;
+  background: #191970;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  /* margin-top: 500px; */
 }
 
 /***************STORIES*****************/
 
-.stories{
-   margin-top: 100px;
-   margin-left: 8%;
-   margin-right: 8%;
+.Stories {
+  margin-top: 100px;
+  margin-left: 8%;
+  margin-right: 8%;
+  max-width: 100%;
+  /* background-color: red; */
 }
 
-.storie{
+.Stories .Storie {
   padding: 5px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
   border-color: #4fcacb;
   border-width: 3px;
-  border-style:solid;
+  border-style: solid;
   margin-left: 10PX;
   margin-top: 1.5%;
   /* position: fixed; */
 }
 
 /***************PUBLICAÇÃO*****************/
-.publicacao{
+.Publicacao {
   margin-left: 17%;
   margin-right: 25%;
   margin-top: 1.5%;
@@ -102,17 +154,19 @@
   border-color: #282c34;
 }
 
-.usuario-foto-publicacao{
+.Publicacao .Usuario-Foto-Publicacao {
   padding: 5px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-top: 1.5%;
+  margin-left: 2%;
   float: left;
 
   /* position: relative; */
 }
-.usuario-publicacao{
+
+.Publicacao .Usuario-Publicacao {
   float: left;
   text-align: initial;
   vertical-align: middle;
@@ -121,67 +175,118 @@
   /* margin-left: ; */
 }
 
-.texto-publicacao{
+.Publicacao .Texto-Publicacao {
   margin-top: 1%;
-  margin-left: 60px;
-  position:static;
+  margin-left: 80px;
+  position: static;
   float: left;
 }
 
-.foto-publicacao{
+.Publicacao .Foto-Publicacao {
   max-width: 500px;
   max-height: 300px;
-  margin-left: 60px;
+  margin-left: 80px;
 
 }
 
-/***************REACAO*****************/
-.reacao{
-  float: bottom;
+/***************Reacao*****************/
+.Reacao {
+  /* float: bottom; */
   margin-left: 85%;
 }
-.icone-reacao{
+
+.Reacao .Icone-Reacao {
   max-width: 50px;
   margin: 0;
 }
 
-/***************COMENTARIO*****************/
-.box-comentarios{
+/***************Comentario*****************/
+.Box-Comentarios {
   margin-left: 60px;
-
+  margin-right: 60px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
 }
-.comentario{
+
+.Box-Comentarios .Comentario {
   background-color: #fffacd;
+  width: 100%;
   margin-top: 15px;
-  float: left;
 }
 
-.usuario-foto-comentario{
+.Box-Comentarios .Replica {
+  background-color: #fffacd;
+  margin-top: 10px;
+  width: 100%;
+  margin-left: 70px;
+}
+
+.Box-Comentarios .Comentario .Usuario-Foto-Comentario,
+.Box-Comentarios .Replica .Usuario-Foto-Comentario {
   padding: 2px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-top: 1.5%;
+  margin-left: 5px;
   float: left;
 }
 
-.usuario-foto-replica{
-  padding: 2px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-top: 1.5%;
+.Box-Comentarios .Comentario .Texto-Comentario,
+.Box-Comentarios .Replica .Texto-Comentario {
+  margin-left: 50px;
+  display: flex;
+}
+
+/***************Botoes Fixos*****************/
+.Botoes-Fixos {
+  position: fixed;
   float: right;
+  margin-right: 40px;
+  margin-left: 93%;
+  margin-top: 2%;
+  max-width: 60px;
+  max-height: 600px;
 }
-.texto-comentario{
-  margin-top: 1.5%;
-  margin-left: 12px;
-  /* position:static; */
-  float: left;
+
+.Botoes-Fixos .Botao-Item {
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 10px;
 }
-.texto-replica{
-  margin-top: 1%;
-  margin-left: 12px;
-  position:static;
-  float: left;
+
+/********************FOOTER**********************/
+footer .Divisor {
+  margin-top: 50px;
+  width: 100%;
+  height: 10px;
+  background-color: #d9d9d9;
+}
+
+footer .Logo-Rodape {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  width: 120px;
+}
+
+footer .Termo-Privacidade {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+footer .Termo-Privacidade .Logo-Privacidade {
+  max-width: 30px;
+}
+
+footer .Termo-Privacidade A {
+  text-decoration: none;
+  color: black;
 }
