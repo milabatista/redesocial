@@ -1,24 +1,25 @@
 import React from "react";
 import foto from "../assets/img/testefoto.jpg";
 import logo from "../assets/img/Nike-Logo.png";
-import Busca from "../Components/Busca";
 import Menu from "../Components/Menu";
 
 
-class Headers extends React.Component {
+class HeaderPerfil extends React.Component {
     render() {
         return (
-            <header>
+            <header className="Header-Perfil">
                 <div className="Box-Perfil">
                     <img className="Foto-Perfil" src={foto} alt="foto-perfil" />
                     <img className="Logo" src={logo} alt="logo" />
 
                 </div>
-                <Busca />
+                <div className="Username-Perfil">
+                    <h1 className="">@helena</h1>
+                </div>
                 <Menu/>
             </header>
         )
     }
 }
 
-export default Headers;
+export default HeaderPerfil;

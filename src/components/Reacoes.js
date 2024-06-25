@@ -7,9 +7,9 @@ class Reacoes extends React.Component {
     render(){
         return(
             <div className="Reacao">
-                <img className="Icone-Reacao" src={amei} alt="amei" />
-                <img className="Icone-Reacao" src={comentario} alt="comentario" />
-                <img className="Icone-Reacao" src={compartilhar} alt="compartilhar" />
+                <button type="button" className="Btn-Reacao"><img className="Icone-Reacao" src={amei} alt="amei" /></button>
+                <button type="button" className="Btn-Reacao"><img className="Icone-Reacao" src={comentario} alt="comentario" /></button>
+                <button type="button" className="Btn-Reacao"><img className="Icone-Reacao" src={compartilhar} alt="compartilhar" /></button>
             </div>
         )
     }

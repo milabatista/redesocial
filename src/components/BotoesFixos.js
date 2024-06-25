@@ -8,10 +8,10 @@ class BotoesFixos extends React.Component {
     render() {
         return (
             <div className="Botoes-Fixos">
-                <img className="Botao-Item" src={addfeed} alt="addfeed"/> 
-                <img className="Botao-Item" src={explorar} alt="explorar"/>
-                <img className="Botao-Item" src={chat} alt="chat"/>
-                <img className="Botao-Item" src={totop} alt="totop"/>
+                <button type="button" className="Btn-Botoes-Fixos"><img className="Botao-Item" src={addfeed} alt="addfeed"/> </button>
+                <button type="button" className="Btn-Botoes-Fixos"><img className="Botao-Item" src={explorar} alt="explorar"/></button>
+                <button type="button" className="Btn-Botoes-Fixos"><img className="Botao-Item" src={chat} alt="chat"/></button>
+                <button type="button" className="Btn-Botoes-Fixos"><img className="Botao-Item" src={totop} alt="totop"/></button>
             </div>
         )
     }
